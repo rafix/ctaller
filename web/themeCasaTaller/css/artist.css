@@ -1,0 +1,36 @@
+/* 
+    Document   : artist
+    Created on : 04-dic-2010, 23:06:46
+    Author     : rafix
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+/* show */
+.artist_show .image {
+  float: right;
+  margin: 0 1em 0.5em 0;
+  background: #fff;
+  border: 1px solid #E5E5E5;
+  padding: 7px;
+}
+
+/* infos */
+.artist_infos span{
+  display: inline;
+}
+
+.artist_show h4.cv {
+  display: block;
+  
+}
+
+.artist_show h3.personal_data{
+    display: inline;
+}

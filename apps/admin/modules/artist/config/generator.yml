@@ -1,0 +1,40 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Artist
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: artist
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields: {  }
+      list:
+        display:
+          - '=first_name'
+          - '=last_name'
+          - works_list
+          - beca_list
+        sort:
+          - id
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: false
+      filter:
+        display:
+          - first_name
+          - last_name
+          - dob
+          - biography
+          - curriculum_vitae
+      form:
+        display:
+          NONE:  [first_name, last_name, photo_form, photo_view, biography, curriculum_vitae, dob]
+          Obras: [works_list]
+          Becas: [beca_list]
+        class: ArtistAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

@@ -1,0 +1,39 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Event
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: event
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields: {  }
+      list:
+        display:
+          - '=title'
+          - place
+          - start
+          - end
+          - description
+        sort:
+          - position
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: true
+      filter:
+        display:
+          - title
+          - place
+          - start
+          - end          
+          - description
+      form:
+        display:
+          NONE: [title, place, start, end,  description ]
+        class: EventAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

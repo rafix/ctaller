@@ -1,0 +1,101 @@
+Article:
+  actAs:
+    DmSortable:
+    DmTaggable:
+    I18n:
+      fields:         [ title, extract, body, is_active ]
+      actAs:
+        Timestampable:
+        DmVersionable:
+  columns:
+    title:            { type: string(120), notnull: true }
+    extract:          { type: string(2000), notnull: true }
+    body:             { type: clob, extra: markdown }
+    image:            { type: integer }
+    author:           { type: integer, notnull: true }
+    is_active:        { type: boolean, notnull: true, default: false }
+    category_id:      { type: integer, notnull: true}
+  relations:
+    Image:
+      class:          DmMedia
+      local:          image
+      foreignAlias:   Articles
+    Author:
+      class: DmUser
+      local: author
+      foreignAlias:   Articles
+    Category:
+      local:          category_id
+      foreign:        id
+      foreignAlias:   Articles
+      onDelete:       RESTRICT
+
+Category:
+  actAs:
+    I18n:
+      fields: [name]
+  columns:
+    name: {type: string(120), notnull: true, unique: true}
+
+Event:
+  actAs:
+    DmSortable:
+    I18n:
+      fields: [name, description, is_active]
+      actAs:
+        Timestampable:
+        DmVersionable:
+  columns:
+    title:       { type: string(120), notnull: true }
+    start:       { type: timestamp, notnull: true }
+    end:         { type: timestamp, notnull: false }
+    description: { type: string(2000), extra: markdown }
+    place:       { type: string(120)}
+
+Beca:
+  columns:
+    year:       { type: string(4), notnull: true }
+    artist_id:  { type: integer, notnull: true }
+    work:       { type: string(120), notnull: true }
+  relations:
+    Artist:
+      local: artist_id
+      foreign: id
+      onDelete: RESTRICT
+
+Artist:
+  columns:
+    first_name:  { type: string(50), notnull: true }
+    last_name:   { type: string(50), notnull: true }
+    dob:         { type: date }
+    photo:       { type: integer }
+    biography:   { type: string(2000), extra: markdown }
+    curriculum_vitae: { type: clob, extra: markdown }
+  relations:
+    Photo:
+      class:          DmMedia
+      local:          photo
+      foreignAlias:   Artists
+
+Work:
+  actAs:
+    DmSortable:
+  columns:
+    title:      { type: string(50), notnull: true }
+    artist_id:  { type: integer, notnull: true }
+    image:      { type: integer, notnull: true }
+    year:       { type: string(4) }
+    dimensions: { type: string(20) }
+    technique:  { type: string(32) }
+    in_gallery: { type: boolean, default: false }
+  relations:
+    Artist:
+      local: artist_id
+      foreign: id
+      onDelete: RESTRICT
+      foreignAlias:   Works
+    Image:
+      class:          DmMedia
+      local:          image
+      foreignAlias:   Works
+      

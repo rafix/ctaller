@@ -1,0 +1,35 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Beca
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: beca
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields: {  }
+      list:
+        display:
+          - year
+          - artist_id          
+          - work
+        sort:
+          - id
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: false
+      filter:
+        display:
+          - year
+          - artist_id
+          - work
+      form:
+        display:
+          NONE: [ year, artist_id, work]
+        class: BecaAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

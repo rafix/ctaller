@@ -1,0 +1,44 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Work
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: work
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields: {  }
+      list:
+        display:
+          - '=title'
+          - artist_id
+          - image
+          - year
+          - dimensions
+          - technique
+          - in_gallery
+        sort:
+          - position
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: true
+      filter:
+        display:
+          - title
+          - in_gallery
+          - artist_id
+          - image
+          - year
+          - dimensions
+          - technique
+      form:
+        display:
+          NONE: [title, artist_id , year, dimensions, technique, in_gallery]
+          Image: [image_form, image_view]
+        class: WorkAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

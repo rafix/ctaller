@@ -1,0 +1,57 @@
+Content:
+
+  Global:
+  
+    main:                   # the main module is required, and must not be removed.
+      components:
+        header:
+        footer:
+        hr:
+        viewGallery:
+
+  Artículos:
+
+    article:
+      name: Artículo|Artículos
+      page: true
+      components:
+        listByCategory: { filters: category }
+        listSideByCategory: { filters: category }
+        listByTag:          { filters: dmTag }
+        show:
+        list:
+
+    category:
+      name: Categoría|Categorías
+
+  Eventos:
+    event:
+      name: Evento|Eventos
+      page: true
+      components:
+        list:
+        listSideNow:
+        listSideThisMonth:
+        listSideNexts:
+        show:
+
+  Becas:
+    beca:
+      name: Beca|Becas
+      components:
+        list:
+        listByArtist:  { filters: artist }
+
+  Artistas:
+    artist:
+      name: Artista|Artistas
+      page: true
+      components:
+        list:
+        show:
+
+    work:
+      name: Obra|Obras
+      components:
+        list:
+        listByArtist:  { filters: artist }

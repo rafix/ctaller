@@ -1,0 +1,23 @@
+default:
+  
+  http_metas:
+    content-type: text/html
+
+  stylesheets:
+    - lib.reset
+    - layout
+    - main
+    - markdown
+    - navigation
+    - search
+    - article
+    - form
+    - typography
+    - artist
+    - tags
+
+  javascripts:
+    - front
+
+  has_layout:     true
+  layout:         layout

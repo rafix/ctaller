@@ -1,0 +1,38 @@
+.tagcloud {
+
+    padding: 10px;
+    text-align:center;
+}
+
+.tagcloud a:link, #tagcloud a:visited {
+    text-decoration:none;
+}
+
+.tagcloud a:hover, #tagcloud a:active {
+    text-decoration: underline;
+/*    color: #000;*/
+}
+
+.tagcloud a {
+    padding: 4px;
+}
+
+.smallest {
+    font-size: x-small;
+}
+
+.small {
+    font-size: small;
+}
+
+.medium {
+    font-size:medium;
+}
+
+.large {
+    font-size:large;
+}
+
+.largest {
+    font-size:larger;
+}

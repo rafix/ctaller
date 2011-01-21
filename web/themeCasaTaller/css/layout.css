@@ -1,0 +1,134 @@
+body{
+    background-color: #e3eee7;
+    font-family: Arial,Helvetica,sans-serif;
+    
+}
+
+div.dm_layout {
+  width: 1000px;
+  margin: auto;
+}
+
+.dm_layout_top {
+  background: #57a695;
+}
+
+.dm_layout_center {
+  width: 1000px;
+  background: white;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#dm_content {
+    width: 700px;
+    float: left;
+    margin: 5px 0 15px 15px;
+    padding: 20px 0 0 0;
+}
+
+#dm_content .dm_page_content {
+    padding: 0 0px 0 20px;
+}
+
+.dm_layout_bottom {
+  background: white;
+}
+
+/* Header */
+.main_header {
+  background: #caced1 url(../images/header-bg.png) repeat-x bottom left;
+  color: #fff;
+  height: 235px;
+  font-family: "Arial Rounded MT Bold",Arial,Helvetica,sans-serif;
+}
+
+#logo_image.logo.big {
+	float: right;
+        position: absolute;
+        margin: 28px auto  auto 630px;
+}
+
+
+/* Left */
+.dm_layout_left {
+  display: none;
+}
+
+/* Right */
+
+.dm_layout_right {
+  float: right;
+  width: 260px;
+  padding: 0;
+  margin: 10px 20px 0 0;
+/*  color: #777;*/
+}
+
+.dm_layout_right ul {
+  list-style: none;
+  text-align: left;
+  margin: 7px 0 8px 0;
+  padding: 0;
+  text-decoration: none;
+}
+.dm_layout_right li {
+  list-style: none;
+  padding: 4px 0 4px 0;
+  margin: 0;
+}
+* html body .dm_layout_right li {
+  height: 1%;
+}
+.dm_layout_right li p {
+  margin: 0;
+}
+
+.dm_layout_right a,
+.dm_layout_right a:visited {
+  text-decoration: none;
+/*  color: #1773BC;*/
+}
+.dm_layout_right a:hover {
+/*  color: #333;*/
+}
+
+/* Footer */
+.main_footer {
+  color: #aaa;
+  clear: both;
+  height: 57px;
+  text-align: center;
+  font-size: 100%;
+/*  font-family: Arial,Helvetica,sans-serif;*/
+  font-weight: lighter;
+}
+.main_footer p {
+  padding: 15px 0;
+  margin: 0;
+}
+
+.my_hr hr {
+    color: #57a695;
+    border: solid;
+}
+/*.main_footer a,
+.main_footer a:visited {
+  color: #aaa;
+  text-decoration: none;
+}*/
+
+.main_footer p.copyright{
+    margin: -1em auto 1em auto;
+}
+
+.main_footer p.minif{
+    font-size: small;
+    margin: -3em auto 1em auto;
+    background-color: white;
+}
+
+.main_footer p.minif img{
+    position: relative;
+    margin-bottom: -0.5em;
+}
